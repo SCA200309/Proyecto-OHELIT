@@ -210,5 +210,6 @@ INSERT INTO public.order_details(
  -- Consulta de libros agrupados por la cnatidad que mas sea vendido de cada libro
 
   	SELECT count(ord.products_id),pr.nombre_libro FROM order_details ord LEFT JOIN products pr ON pr.id = ord.products_id GROUP BY pr.nombre_libro;
-
+-- Consulta promedio valores de los libros de la tienda
+	SELECT avg(precio) FROM products; 
     
